@@ -6,7 +6,7 @@
 
 sox $1 -t raw -r 16000 -e signed-integer -b 16 --endian little -c 1 $1.sw upsample > /dev/null 2>&1
 
-./amrwb-encoder 8 $1.sw $2 > /dev/null 2>&1
+amrwb-encoder 8 $1.sw $2 > /dev/null 2>&1
 
 rm $1.sw > /dev/null 2>&1
 

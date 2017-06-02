@@ -14,7 +14,7 @@ echo "PLAY .sw raw audio file"
 play -t raw -r 16000 -e signed-integer -b 16 --endian little -c 1 wb_out.sw > /dev/null 2>&1
 
 echo "ENCODE signed word raw(.sw) to wide-band(wb) AMR ..."
-./amrwb-encoder 8 wb_out.sw wb_out.amr > /dev/null 2>&1
+amrwb-encoder 8 wb_out.sw wb_out.amr > /dev/null 2>&1
 echo "... and PLAY it with sox's play command"
 play wb_out.amr > /dev/null 2>&1
 
